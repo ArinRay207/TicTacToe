@@ -13,7 +13,7 @@ body
 
 .title
 {
-    color: orange;
+    color: orangered;
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
     font-size: 4rem;
@@ -31,6 +31,22 @@ body
     margin-bottom: 4px;
 }
 
+.score
+{
+    height: 160px;
+    width: 160px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: orangered;
+    margin-top: 50px;
+}
+
 .btn
 {
     height: 160px;
@@ -40,7 +56,7 @@ body
     align-items: center;
     background-color: #000;
     position: relative;
-    color: orange;
+    color: orangered;
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
     font-size: 3.5rem;
@@ -85,7 +101,7 @@ p
 
 .draw
 {
-    background-color: orange;
+    background-color: orangered;
     color: black;
 }
 
@@ -93,4 +109,24 @@ p
 {
     margin-top: 25px;
     font: 1em sans-serif;
+}
+
+@media (max-width: 550px) 
+{
+    .title
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 3rem;
+        height: 200px;
+    }
+
+    .btn
+    {
+        height: 125px;
+        width: 125px;
+        font-size: 2.5rem;
+    }
 }

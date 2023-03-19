@@ -1,8 +1,12 @@
 var start = 0;
 var turn = 0; 
+var rslt = 0;
 var board = [['', '', ''], ['', '', ''], ['', '', '']];
+$(document).keypress(srt);
+$("body").on("click", msrt);
 
-$(".btn").on("click", function(){
+$(".btn").on("click", function()
+{
     if (start)
     {
         var id = ($(this).attr("id"));
@@ -31,12 +35,23 @@ $(".btn").on("click", function(){
             {
                 $(".title").text("O's TURN").removeClass("yellow").addClass("red");
             }
-            check(r,c);
+            rslt = check(r,c);
         }
     }
 })
 
-$(document).keypress(srt);
+
+function msrt()
+{
+    if (rslt) rslt = 0;
+    else if(start === 0)
+    {
+        $(".btn").removeClass("yellow").removeClass("red").removeClass("win-x").removeClass("win-o").removeClass("draw").addClass("black");
+        start = 1;
+        
+        $(".title").removeClass("win-x").removeClass("win-o").removeClass("draw").text("X's TURN").removeClass("red").addClass("yellow");
+    }
+}
 
 function srt()
 {
@@ -108,7 +123,7 @@ function check(i, j)
         d2 = temp;
 		ans = ans || temp;
 	}
-
+    
 	if (ans)        w = 1;
 	if (turn == 9 && w == 0)  ans = 1;
 	
@@ -117,23 +132,23 @@ function check(i, j)
         if (turn == 9 && w == 0)		
         {
             $(".title").text("DRAW!").addClass("draw");
-            $(".btn").addClass("draw");
+            $(".btn").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("draw");
         }
 		else if (turn % 2)	
         {
             $(".title").text("X WINS!").addClass("win-x");
-            if (d1) $(".d1").addClass("win-x");
-            if (d2) $(".d2").addClass("win-x");
-            if (r) $(".row-" + i).addClass("win-x");
-            if (c) $(".col-" + j).addClass("win-x");
+            if (d1) $(".d1").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-x");
+            if (d2) $(".d2").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-x");
+            if (r) $(".row-" + i).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-x");
+            if (c) $(".col-" + j).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-x");
         }
 		else
         {
             $(".title").text("O WINS!").addClass("win-o");
-            if (d1) $(".d1").addClass("win-o");
-            if (d2) $(".d2").addClass("win-o");
-            if (r) $(".row-" + i).addClass("win-o");
-            if (c) $(".col-" + j).addClass("win-o");
+            if (d1) $(".d1").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-o");
+            if (d2) $(".d2").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-o");
+            if (r) $(".row-" + i).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-o");
+            if (c) $(".col-" + j).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).addClass("win-o");
         } 			
         end();
 	}
