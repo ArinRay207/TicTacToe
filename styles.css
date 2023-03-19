@@ -1,0 +1,152 @@
+body
+{
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+
+#board
+{
+    display: inline-block;
+    background-color: #fff;
+}
+
+.title
+{
+    color: orangered;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.container
+{
+    text-align: center;
+}
+
+.row
+{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.score
+{
+    height: 160px;
+    width: 160px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: orangered;
+    margin-top: 50px;
+}
+
+.btn
+{
+    height: 160px;
+    width: 160px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    position: relative;
+    color: orangered;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+
+.c
+{
+    margin-bottom: 0;
+}
+
+p
+{
+    font-size: 1.5rem;
+}
+
+.yellow
+{
+    color: yellow;
+}
+
+.red
+{
+    color: red;
+}
+
+.black
+{
+    color: black;
+}
+
+.win-x
+{
+    background-color: yellow;
+    color: black;
+}
+
+.win-o
+{
+    background-color: red;
+    color: black;
+}
+
+.draw
+{
+    background-color: orangered;
+    color: black;
+}
+
+#footer
+{
+    margin-top: 25px;
+    font: 1em sans-serif;
+}
+
+@media ((max-width: 550px) and (min-width: 399px)) 
+{
+    .title
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 3rem;
+        height: 200px;
+    }
+
+    .btn
+    {
+        height: 125px;
+        width: 125px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) 
+{
+    .title
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 2rem;
+        height: 150px;
+    }
+
+    .btn
+    {
+        height: 85px;
+        width: 85px;
+        font-size: 2rem;
+    }
+}
